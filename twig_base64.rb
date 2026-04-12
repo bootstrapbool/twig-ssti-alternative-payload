@@ -4,7 +4,7 @@
 ##
 
 class MetasploitModule < Msf::Encoder
-  Rank = GreatRanking
+  Rank = GoodRanking
 
   def initialize
     super(
